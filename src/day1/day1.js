@@ -1,5 +1,5 @@
 const fs = require('fs');
-const INPUT = fs.readFileSync('input_day1.txt', 'UTF-8').split("\n");
+const INPUT = fs.readFileSync('input_day1.txt', 'utf8').split("\n");
 
 const findSummands = (sum, count = 2) => {
   const eligible = INPUT.map(n => parseInt(n)).filter(n => n <= sum);
