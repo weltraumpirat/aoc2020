@@ -74,18 +74,18 @@ describe('Day 11:', () => {
       expect(day11.evolve(testFloorRound4)).toEqual(testFloorRound5);
     });
     it('should find 37 occupied seats on the test floor', ()=> {
-      expect(day11.countOccupied(testFloor)).toEqual(37);
+      expect(day11.finalOccupied(testFloor)).toEqual(37);
     })
     it('should find 2247 occupied seats on the input floor', ()=> {
-      expect(day11.countOccupied(floor)).toEqual(2247);
+      expect(day11.finalOccupied(floor)).toEqual(2247);
     })
   });
   describe('Part 2:', () => {
     it('should find 26 occupied seats on the test floor', () => {
-      expect(day11.countOccupied2(testFloor)).toEqual(26);
+      expect(day11.finalOccupied(testFloor, day11.sight, day11.sightOccupied)).toEqual(26);
     });
     it('should find 2011 occupied seats on the input floor', ()=> {
-      expect(day11.countOccupied2(floor)).toEqual(2011);
+      expect(day11.finalOccupied(floor, day11.sight, day11.sightOccupied)).toEqual(2011);
     })
   });
 });
